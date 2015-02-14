@@ -4,10 +4,10 @@
       <img ng-src="{{team.logo}}">
     </div>
     <div class="record">
-      <h1> Wins: {{team.wins}} Losses: {{team.losses}} </h1>
+      <h4> Wins: {{team.wins}} Losses: {{team.losses}} </h4>
     </div>
     <div class="team-data">
-      <div class="game" ng-repeat="game in team" ng-class="{'even' : $index % 2 === 0}">
+      <div class="together-game" ng-repeat="game in team" ng-class="{'even' : $index % 2 === 0}">
         Date: {{game.createdAt | date: 'mediumDate'}}
         <br />
         <!-- 
