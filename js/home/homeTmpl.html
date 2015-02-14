@@ -1,14 +1,14 @@
 <div class="inner-container">
   <div class='team-container' ng-repeat='team in allData'>
     <div class="logo">
-      <img ng-src="{{team.logoPath}}">
+      <img ng-src="{{team.logo}}">
     </div>
     <div class="record">
       <h1> Wins: {{team.wins}} Losses: {{team.losses}} </h1>
     </div>
     <div class="team-data">
       <div class="game" ng-repeat="game in team" ng-class="{'even' : $index % 2 === 0}">
-        Date: {{team.game.createdAt | date: 'mediumDate'}}
+        Date: {{game.createdAt | date: 'mediumDate'}}
         <br />
         <!-- 
         The below question marks should render like this
@@ -16,7 +16,7 @@
         Opponent Name - Opponent Score for that Game
       -->
 
-        {{homeTeam}} - {{game.homeTeamScore}}
+        {{team.name}} - {{game.homeTeamScore}}
         <br /> {{game.opponent}} - {{game.opponentScore}}
         <br />
       </div>
