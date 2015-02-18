@@ -38,19 +38,19 @@ angular.module('nbaRoutes').controller('teamCtrl', function ($scope, $routeParam
 
 
 
-  var findTeams = function () {
-    var teams = [];
-    teamData.forEach(function (game) {
-      if (teams.indexOf(game.opponent) === -1) {
-        if (game.opponent) {
-          teams.push(game.opponent);
-        }
-      }
-
-    });
-
-    return teams;
-  };
-  $scope.teams = findTeams();
+  //  var findTeams = function () {
+  //    var teams = [];
+  //    teamData.forEach(function (game) {
+  //      if (teams.indexOf(game.opponent) === -1) {
+  //        if (game.opponent) {
+  //          teams.push(game.opponent);
+  //        }
+  //      }
+  //
+  //    });
+  //
+  //    return teams;
+  //  };
+  //  $scope.teams = findTeams();
 
 });
